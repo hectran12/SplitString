@@ -10,13 +10,16 @@ var Text : string; (*Văn bản cần tách*)
     status : boolean; (*Trạng thái tách*)
     a : integer; (*Support for*)
     Session : string; (*support length*)
-    liChar : array[0..1000] of string;
-    amAC : integer;
-    isCheck : boolean;
+    liChar : array[0..1000] of string; (*Toàn kí tự dạng chuỗi*)
+    amAC : integer; (*Phiên*)
+    isCheck : boolean; (*Check length*)
     (*explode variable*)
-    allText : string;
-    allStt : integer;
-    listInt : array[0..1000] of integer;
+    allText : string; (*Tất cả kí tự*)
+    allStt : integer; (*phiên*)
+    listInt : array[0..1000] of integer; (*Session*)
+    {
+        Session variales
+    }
     x : integer;
     y : integer;
     z : integer;
