@@ -24,8 +24,15 @@ var Text : string; (*Văn bản cần tách*)
     y : integer;
     z : integer;
     listLocal : array[0..1000] of get;
+    
+{
+    Lấy độ dài kí tự
+    how to use:
+        - Ghi chuỗi vào biến (*Text*)
+        - gọi hàm ra getLength()
+        - Số kí tự trả về bên trong biến (*amAC*)
+}
 procedure getLength();
-
 const chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY, (.\+*?[^]$(){}=!<>|:-)';
 begin
     isCheck := False;
@@ -44,6 +51,13 @@ begin
     end;
 end;
 
+{
+    Cắt chuỗi ( 1 kí tự )
+    how to use:
+        - Ghi chuỗi vào biến (*Text*)
+        - gọi hàm ra Split('<kí tự muốn tách>')
+        - Kết quả trả về dạng array , được gán vào biến (*Result*) ( Kiểu dữ liệu mỗi phần tử là String )
+}
 procedure Split(s: string);
 begin
     getLength();
@@ -62,6 +76,21 @@ begin
     Result[amRes] := Session;
 end;
 
+{
+    Cắt chuỗi nhiều kí tự , theo dộ dài
+    how to use:
+        - Ghi chuỗi vào biến (*Text*)
+        - gọi hàm ra Explode_Count('<chuỗi muốn tách>','<độ dài chuỗi muốn tách>')
+        - Kết quả trả về được gán vào biến (*listLocal*)
+        - Kiểu dữ liệu trả về là get được record trong type với (*start*) và (*ends*) là 2 integer
+        - Lấy ra bằng cách như demo bên dưới
+        CÁCH SỬ DỤNG CHI TIẾT:
+        - Biến (*amRes*) là tổng số lần gặp kí tự muốn cắt trong chuỗi tìm được
+        - Lấy nó và dùng for từ 0 đến amRes
+        - Ta lấy được 2 giá trị từ 2 biến loại bản ghi là (*start*) và (*ends*)
+        - start: Lấy vị trí đầu gặp chuỗi muốn cắt
+        - ends: Lấy vị trí cuối của chuỗi đã gặp
+}
 procedure Explode_Count(s: string; len: integer);
 begin
     getLength();
@@ -101,6 +130,8 @@ begin
 end;
 
 begin
+
+    (*Example*)
     Text := 'motconmeo , haiconmeo';
     (*Split - cắt được 1 kí tự*)
     writeln('Chức năng Split()');
