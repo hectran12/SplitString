@@ -1,5 +1,5 @@
 {
-    Một số biến cần result lại nếu gặp bung
+    Một số biến cần result lại nếu gặp bug
     (*amRes, amAcc, Result*)
 
 }
