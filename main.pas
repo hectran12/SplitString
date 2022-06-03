@@ -1,3 +1,8 @@
+{
+    Một số biến cần result lại nếu gặp bung
+    (*amRes, amAcc, Result*)
+
+}
 type
     get = record
             start : integer;
