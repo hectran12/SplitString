@@ -3,6 +3,7 @@
     (*amRes, amAcc, Result*)
 
 }
+program split_string;
 type
     get = record
             start : integer;
